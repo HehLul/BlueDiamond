@@ -8,18 +8,18 @@
   margin: 0 auto;
 }
 
-.contact-info,
-.hours-table {
+.contact-info {
   background: white;
-  padding: 30px;
+  padding: 40px;
   border-radius: 15px;
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
+  height: fit-content;
 }
 
-.contact-info:hover,
-.hours-table:hover {
+.contact-info:hover {
   transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
 }
 
 .contact h2 {
@@ -51,46 +51,37 @@
   gap: 10px;
 }
 
-/* Hours Table Styles */
-.hours-table table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 8px;
-}
-
-.hours-table th,
-.hours-table td {
-  padding: 12px;
-  text-align: left;
-  font-size: 1.1rem;
-  border: none;
-}
-
-.hours-table th {
-  background-color: transparent;
-  color: var(--primary);
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 1rem;
-}
-
-.hours-table tr {
-  transition: var(--transition);
-}
-
-.hours-table tr:not(:first-child):hover {
-  background-color: var(--light);
-  transform: scale(1.02);
-}
-
-.hours-table td:first-child {
-  font-weight: bold;
-  color: var(--dark);
-}
-
 .cta-container {
-  grid-column: 1 / -1;
   text-align: center;
   margin-top: 40px;
+}
+
+/* Map Container Styles */
+.map-container {
+  background: white;
+  border-radius: 15px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: var(--transition);
+  height: 400px;
+}
+
+.map-container:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .contact {
+    padding: 20px;
+  }
+
+  .map-container {
+    height: 300px;
+  }
+
+  .contact-info {
+    padding: 30px;
+  }
 }

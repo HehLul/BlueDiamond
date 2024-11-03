@@ -136,3 +136,48 @@ document.addEventListener("DOMContentLoaded", () => {
   handleNavbarScroll();
   updateActiveSection();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sliders = document.querySelectorAll(".before-after-wrapper");
+
+  sliders.forEach((slider) => {
+    const handle = slider.querySelector(".slider-handle");
+    const afterImage = slider.querySelector(".after-image");
+    let isResizing = false;
+
+    // Mouse events
+    handle.addEventListener("mousedown", startResizing);
+    document.addEventListener("mousemove", resize);
+    document.addEventListener("mouseup", stopResizing);
+
+    // Touch events for mobile
+    handle.addEventListener("touchstart", startResizing);
+    document.addEventListener("touchmove", resize);
+    document.addEventListener("touchend", stopResizing);
+
+    function startResizing(e) {
+      isResizing = true;
+      e.preventDefault();
+    }
+
+    function stopResizing() {
+      isResizing = false;
+    }
+
+    function resize(e) {
+      if (!isResizing) return;
+
+      const sliderRect = slider.getBoundingClientRect();
+      let x = e.type === "mousemove" ? e.pageX : e.touches[0].pageX;
+      x = x - sliderRect.left;
+      let position = (x / sliderRect.width) * 100;
+
+      // Constrain position between 0 and 100
+      position = Math.max(0, Math.min(position, 100));
+
+      // Update after image width and handle position
+      afterImage.style.width = `${position}%`;
+      handle.style.left = `${position}%`;
+    }
+  });
+});

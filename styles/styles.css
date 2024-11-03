@@ -97,7 +97,7 @@ section {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(221, 38, 66, 0.3);
+  box-shadow: 0 4px 15px rgba(66, 38, 221, 0.3);
   transition: var(--transition);
 }
 
