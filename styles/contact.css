@@ -1,0 +1,96 @@
+/* Contact Section */
+.contact {
+  background: linear-gradient(to bottom, #fff, var(--light));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-info,
+.hours-table {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.contact-info:hover,
+.hours-table:hover {
+  transform: translateY(-5px);
+}
+
+.contact h2 {
+  color: var(--primary);
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  font-family: var(--font-secondary);
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.contact h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary);
+}
+
+.contact-info p {
+  font-size: 1.3rem;
+  margin: 15px 0;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Hours Table Styles */
+.hours-table table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+.hours-table th,
+.hours-table td {
+  padding: 12px;
+  text-align: left;
+  font-size: 1.1rem;
+  border: none;
+}
+
+.hours-table th {
+  background-color: transparent;
+  color: var(--primary);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+.hours-table tr {
+  transition: var(--transition);
+}
+
+.hours-table tr:not(:first-child):hover {
+  background-color: var(--light);
+  transform: scale(1.02);
+}
+
+.hours-table td:first-child {
+  font-weight: bold;
+  color: var(--dark);
+}
+
+.cta-container {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 40px;
+}

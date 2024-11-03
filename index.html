@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blue Diamondw</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section
+      class="hero"
+      style="
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url('./assets/lambo2.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      "
+    >
+      <nav class="navbar">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hero-content">
+        <h2>Blue Diamond Detailing</h2>
+        <p>Windsor's Signature Auto Detailing Experience</p>
+        <a href="#" class="cta-button" onclick="openDialog()">Contact us</a>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+      <!-- <h2>About us</h2> -->
+      <div class="about-content">
+        <img
+          src="./assets/barbershop1.jpg"
+          alt="Barber Photo"
+          class="barber-photo"
+        />
+        <div class="about-text">
+          <h3>About us</h3>
+          <p>
+            Our mission at Alssafir Barbershop is to ensure our clients receive
+            the best in professional and comfortable service. <br /><br />
+            Our experienced barber is dedicated to creating a welcoming
+            atmosphere where you can relax and enjoy a quality haircut tailored
+            just for you. <br /><br />
+            Walk-ins are always welcome, or book your appointment today!
+          </p>
+          <a href="#" class="cta-button" onclick="openDialog()">Book Now!</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews">
+      <h2>Client Reviews</h2>
+      <div class="review-list">
+        <div class="review-item">
+          <img src="assets/review1.png" alt="Customer 1" class="review-photo" />
+          <blockquote>
+            "Loved the way he did my hair cut! Very impressive and most
+            friendly! We had a good conversation and he did a nice hair cut! I
+            suggest him for 100%"
+          </blockquote>
+          <img class="stars" src="assets/stars.jpg" alt="" />
+        </div>
+        <div class="review-item">
+          <img
+            src="./assets/review2.png"
+            alt="Customer 2"
+            class="review-photo"
+          />
+          <blockquote>
+            "He knows what he is doing, best barber shop in wyandotte east
+            region..never been an issue with 6 years of service. Abo shaker is
+            great guy."
+          </blockquote>
+          <img class="stars" src="assets/stars.jpg" alt="" />
+        </div>
+        <div class="review-item">
+          <img
+            src="./assets/review3.png"
+            alt="Customer 3"
+            class="review-photo"
+          />
+          <blockquote>
+            "Amazing cuts! Been coming here for more than 7 years now!"
+          </blockquote>
+          <img class="stars" src="assets/stars.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <h2>Our Services</h2>
+      <div class="service-list">
+        <div class="service-item">
+          <h3>Haircut</h3>
+        </div>
+        <div class="service-item">
+          <h3>Beard Trim</h3>
+        </div>
+        <div class="service-item">
+          <h3>Buzz Cut</h3>
+        </div>
+        <div class="service-item">
+          <h3>Fade</h3>
+        </div>
+        <div class="service-item">
+          <h3>Kids Cut</h3>
+        </div>
+        <div class="service-item">
+          <h3>Waxing</h3>
+        </div>
+        <div class="service-item">
+          <h3>Designs</h3>
+        </div>
+        <div class="service-item">
+          <h3>Lineups</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="contact-info">
+        <h2>Contact Us</h2>
+        <p>Phone: (226) 260 2939</p>
+        <p>712 Wyandotte St E</p>
+        <p>Windsor, ON N9A 3J4</p>
+        <div class="cta-container">
+          <a href="#" class="cta-button" onclick="openDialog()">Book Now</a>
+          <!-- CTA Button -->
+        </div>
+      </div>
+      <div class="hours-table">
+        <h2>Hours</h2>
+        <table>
+          <tr>
+            <th>Day</th>
+            <th>Hours</th>
+          </tr>
+          <tr>
+            <td>Monday</td>
+            <td>Closed</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>10 a.m. – 10 p.m.</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>10 a.m. – 10 p.m.</td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td>10 a.m. – 10 p.m.</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>
+              10 a.m. – 12:30 p.m. <br />
+              2 p.m. – 10 p.m.
+            </td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>9:30 a.m. – 10 p.m.</td>
+          </tr>
+          <tr>
+            <td>Sunday</td>
+            <td>9:30 a.m. – 10 p.m.</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <!-- Add this right before the closing body tag -->
+    <div class="dialog-overlay" id="bookingDialog">
+      <div class="dialog-content">
+        <div class="dialog-header">
+          <h2>Book Your Appointment</h2>
+          <button class="close-dialog" onclick="closeDialog()">&times;</button>
+        </div>
+        <div class="dialog-body">
+          <p>
+            Ready to get your fresh cut? Call us now to book your appointment!
+          </p>
+          <div class="phone-number">
+            <span>(226) 260-2939</span>
+          </div>
+          <p class="availability-note">Available during business hours</p>
+          <div class="dialog-buttons">
+            <a href="tel:+12262602939" class="call-button">
+              <span class="phone-icon">📞</span>
+              Call Now
+            </a>
+            <button class="secondary-button" onclick="closeDialog()">
+              Maybe Later
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="copyright">
+        <p>&copy; 2024 Alssafir Barber Shop. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>

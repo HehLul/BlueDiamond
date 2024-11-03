@@ -1,0 +1,155 @@
+/* Dialog Styles */
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dialog-overlay.active {
+  opacity: 1;
+  display: flex;
+}
+
+.dialog-content {
+  background: white;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  transform: translateY(-20px);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.dialog-overlay.active .dialog-content {
+  transform: translateY(0);
+}
+
+.dialog-header {
+  background: var(--gradient-primary);
+  padding: 20px 30px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dialog-header h2 {
+  margin: 0;
+  font-family: var(--font-secondary);
+  font-size: 1.8rem;
+}
+
+.close-dialog {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.close-dialog:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dialog-body {
+  padding: 30px;
+  text-align: center;
+}
+
+.dialog-body p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.phone-number {
+  background: var(--light);
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px 0;
+}
+
+.phone-number span {
+  font-size: 2rem;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.availability-note {
+  font-size: 0.9rem !important;
+  color: #888 !important;
+  margin-top: -10px;
+}
+
+.dialog-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.call-button {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--primary);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.call-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.phone-icon {
+  font-size: 1.2rem;
+}
+
+.secondary-button {
+  flex: 1;
+  background: #f0f0f0;
+  color: #666;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.secondary-button:hover {
+  background: #e0e0e0;
+}

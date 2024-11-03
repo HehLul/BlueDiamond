@@ -1,0 +1,136 @@
+/* Services Section */
+.services {
+  background: linear-gradient(135deg, var(--light), #fff);
+  position: relative;
+  overflow: hidden;
+}
+
+.services::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--primary),
+    transparent
+  );
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.service-item {
+  position: relative;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: var(--transition);
+  border: none;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.service-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.service-item:hover::before {
+  opacity: 1;
+}
+
+.service-item h3 {
+  font-size: 1.6rem;
+  color: var(--dark);
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+.service-item:hover h3 {
+  color: white;
+}
+
+.service-item .price,
+.service-item .duration {
+  position: absolute;
+  font-size: 1.2rem;
+  color: #666;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+.service-item .price {
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.service-item .duration {
+  top: 20px;
+  left: 20px;
+  font-size: 0.9rem;
+}
+
+.service-item:hover .price,
+.service-item:hover .duration {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.service-item .pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    var(--primary) 1px,
+    transparent 0
+  );
+  background-size: 20px 20px;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+@keyframes serviceHover {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.service-item:hover {
+  animation: serviceHover 1s ease infinite;
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 3rem;
+}
